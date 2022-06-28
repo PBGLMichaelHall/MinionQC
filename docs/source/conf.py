@@ -56,20 +56,53 @@ exclude_patterns = ['_build','Thumbs.db','.DS_Store']
 # a list of builtin themes.
 pygments_style = 'sphinx'
 master_doc = 'index'
-#html_theme = 'alabaster'
-html_theme = 'sphinx_rtd_theme'
+
+html_theme = "sphinx_rtd_theme"
 html_add_permalinks = ""
 
 html_theme_options = {
-  'sticky_navigation': True,
-  'collapse_navigation': False,
+    'sticky_navigation': True,
+    'collapse_navigation': False,
 }
-# Add any paths that contain custom static files (such as style sheets) here,
-# relative to this directory. They are copied after the builtin static files,
-# so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
 
+
+# -- Options for LaTeX output ---------------------------------------------
 
 latex_engine = 'pdflatex'
 latex_theme = 'howto'
 latex_toplevel_sectioning = 'section'
+
+# Configuration of Title Page
+latex_maketitle = r'''
+        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page
+        \begin{titlepage}
+            \vspace*{10mm} %%% * is used to give space from top
+            \flushright\textbf{\Huge {Oxford Nanopore Quality Control Work Flow v1.0\\}}
+            \vspace{0mm} %%% * is used to give space from top
+            \textbf{\Large {A Step-by-Step Guide\\}}
+            \vspace{0mm} %%% * is used to give space from top
+            \textbf{\Large {[DRAFT]\\}}
+            \vspace{50mm}
+            \textbf{\Large {Michael Hall\\}}
+            \vspace{10mm}
+            \textbf{\Large {Plant Breeding and Genetics Laboratory\\}}
+            \vspace{0mm}
+            \textbf{\Large {FAO/IAEA Joint Division\\}}
+            \vspace{0mm}
+            \textbf{\Large {Seibersdorf, Austria\\}}
+	    \vspace{10mm}
+            \normalsize Created: June, 2022\\
+            \vspace*{0mm}
+            \normalsize  Last updated: 28 June 2022
+            %% \vfill adds at the bottom
+            \vfill
+            \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views
+expressed do not necessarily reflect those of the International Atomic Energy Agency or its Member States and remain the responsibility of the contributors. The use of particular designations of countries or territories does not imply any judgement by the publisher, the IAEA, as to the legal status of such countries or territories, of their authorities and institutions or of the delimitation of their boundaries. The mention of names of specific companies or products (whether or not indicated as registered) does not imply any intention to infringe proprietary rights, nor should it be construed as an endorsement or recommendation on the part of the IAEA.}}
+        \end{titlepage}
+        \pagenumbering{arabic}
+        \newcommand{\sectionbreak}{\clearpage}
+'''
+latex_elements = {
+   'releasename': 'Version 1.0',
+   'maketitle': latex_maketitle,
+}
