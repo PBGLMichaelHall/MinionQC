@@ -6,6 +6,11 @@ Oxford Nanopore Minion Quality Control
 :Date:   06/28/2022
 
 
-QTL-Rice-Cold-Tolerance
-=======================
+Arabidopsis Thalania
+====================
+
+Standard Output from MinIon Run
+-------------------------------
+
+
 
