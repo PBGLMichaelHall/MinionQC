@@ -6,11 +6,9 @@ Oxford Nanopore Minion Quality Control
 :Date:   06/28/2022
 
 
-Arabidopsis Thalania
-====================
+.. raw:: html
 
-Standard Output from MinIon Run
--------------------------------
+   Arabidopsis Thalania
 
 
 
