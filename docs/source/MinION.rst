@@ -161,5 +161,28 @@ Oxford Nanopore Minion Quality Control
    INFO [2022-06-28 10:59:50] .: plotting physical overview of output per channel
 
    
+
+.. figure:: ../images/channel_summary.png
+
+.. figure:: ../images/flowcell_overview.png
+
+.. figure:: ../images/gb_per_channel_overview.png
+
+.. figure:: ../images/length_by_hour.png
+
+.. figure:: ../images/length_histogram.png
+
+.. figure:: ../images/length_vs_q.png
+
+.. figure:: ../images/q_by_hour.png
+
+.. figure:: ../images/q_histogram.png
+
+.. figure:: ../images/reads_per_hour.png
+
+.. figure:: ../images/yield_by_length.png
+
+.. figure:: ../images/yield_over_time.png
+
 ::
 
