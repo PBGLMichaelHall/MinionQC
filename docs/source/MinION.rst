@@ -8,8 +8,41 @@ Oxford Nanopore Minion Quality Control
 
 .. raw:: html
 
-   **Arabidopsis Thalania**
+**Arabidopsis Thalania**
+
+Standard Workflow
+=================
    
+.. code:: shell
+
+**MinionQC**
+
+
+
+   **Clone the Github Repository**
+
+   git clone https://github.com/PBGLMichaelHall/MinionQC.git
+
+   **Change Working Directory**
+
+   cd/ MinionQC
+
+   **Create a new enviroment**
+
+   mamba env create --file env/MinionQCenv.yaml
+
+   **Activate new Environment**
+
+   conda activate MinionQC
+
+   **Run Minion R Script**
+
+   Rscript Minion_R_QC_Script/MinIONQC.R -i summary/sequencing_summary.txt -q 0
+
+Data Tree Structure
+===================
+
+
 .. code:: shell
 
    (base) michael@mh-ubuntu:~/Desktop/Arabidopsis_Thalania_Run00123$ tree
@@ -81,11 +114,15 @@ Oxford Nanopore Minion Quality Control
         └── sequencing_summary.txt
 
    16 directories, 49 files
-
+   
+   
+   
+Guppy Basecaller Log Standard Output
+====================================
 
 .. code:: shell
 
-   **Guppy Basecaller Log Standard Output**
+
    
    2022-05-23 12:49:31.950838 [guppy/message] ONT Guppy basecalling software version 5.0.17+99baa5b27
    config file:        /opt/ont/guppy/data/dna_r9.4.1_450bps_hac.cfg
@@ -102,15 +139,8 @@ Oxford Nanopore Minion Quality Control
    threads per caller: 4
 
 
-   
-
-
-.. code:: shell
-
-   **Create a Mamba/Conda Environment**
-   
-   
-   
+Conda/Mamba Environment Preview
+===============================
    
 .. code:: yaml 
    
@@ -134,6 +164,12 @@ Oxford Nanopore Minion Quality Control
      - r-viridis
      - r-yaml
   
+
+
+Standard R Script Output
+========================
+
+
 
 .. code:: shell
 
@@ -160,7 +196,9 @@ Oxford Nanopore Minion Quality Control
    INFO [2022-06-28 10:59:49] .: plotting flowcell channels summary histograms
    INFO [2022-06-28 10:59:50] .: plotting physical overview of output per channel
 
-   
+
+Figures/Plots
+=============
 
 .. figure:: ../images/channel_summary.png
 
